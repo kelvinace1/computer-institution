@@ -1,0 +1,26 @@
+{% extends 'game/base.html' %}
+
+{% block content %}
+    <h1>hello {{user.username}}</h1>
+
+    <h1>{{object.general_computing}}</h1>
+    <p>{{object.operating_system}}</p>
+    <p>{{object.ms_excel}}</p>
+    <p>{{object.word_processing}}</p>
+    <p>{{object.presentation}}</p>
+    <p>{{object.corel_draw}}</p>
+    <p>{{object.adobe_photoshop}}</p>
+    <p>{{object.data_processing}}</p>
+    <p>{{object.networking}}</p>
+    <p>{{object.information_technology}}</p>
+    
+<div>
+
+    {% for c in post.comments.all %}
+        <p>{{c.comment}}</p>
+    {% empty %}
+    <p>no comment yet</p>
+    {% endfor %}
+
+</div>
+{% endblock content %}

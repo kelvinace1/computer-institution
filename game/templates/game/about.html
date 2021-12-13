@@ -1,0 +1,30 @@
+{% extends 'game/base.html' %}
+
+{% block content %}
+<h1 class="ba">welcome to the about page</h1>
+<p class="ab">we are a theory and practical driven computer training institution with many years of knowledge 
+    and with a lot of students trained to full potential
+</p>
+<p><button class="bb"><a href="{% url 'home' %}">go to home</a></button></p>
+
+<style>
+    .ba{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+        text-rendering: optimizeLegibility;
+        text-justify: auto;
+        border: 2px 3px 2px 3px;
+    }
+
+    .ab{
+        text-justify: auto;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 100;
+    }
+
+    .bb{
+        text-align: center;
+    }
+</style>
+{% endblock content %}

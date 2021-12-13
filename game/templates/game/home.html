@@ -1,0 +1,50 @@
+{% extends 'game/base.html' %}
+
+
+{% block content %}
+
+    <h1>hello {{user.username}}</h1>
+
+    <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>general_computing</th>
+              <th>operating_system</th>
+              <th>ms_excel</th>
+              <th>word_processing</th>
+              <th>presentation</th>
+              <th>corel_draw</th>
+              <th>adobe_photoshop</th>
+              <th>data_processing</th>
+              <th>networking</th>
+              <th>information_technology</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for course in courses %}
+            <tr>
+              <td>{{course.general_computing}}</td>
+              <td>{{course.operating_system}}</td>
+              <td>{{course.ms_excel}}</td>
+              <td>{{course.word_processing}}</td>
+              <td>{{course.presentation}}</td>
+              <td>{{course.corel_draw}}</td>
+              <td>{{course.adobe_photoshop}}</td>
+              <td>{{course.data_processing}}</td>
+              <td>{{course.networking}}</td>
+              <td>{{course.information_technology}}</td>
+             <!--{% if course.general_computing > 50.00 %}
+              <h1>you fail</h1>
+              {% else %}
+              <h1>you passed</h1>
+              {% endif %} -->
+            </tr>
+            
+    {% endfor %}
+    
+        
+        </table>
+
+
+{% endblock content %}
